@@ -3,7 +3,7 @@ const client_id = '9506d781b79700867d72';
 const client_secret = 'a29453969d08a7607d6529a987278707cc0ed359';
 
 // 重定向回到应用程序的 URL
-const redirect_uri = 'http://localhost:3000';
+const redirect_uri = window.location.href;
 
 // 登录页面
 export function githubLogin() {
