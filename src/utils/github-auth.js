@@ -29,7 +29,7 @@ export async function githubCallback() {
         Accept: 'application/json'
     };
 
-    const response = await fetch(`https://api.github.com/login/oauth/access_token?${new URLSearchParams(params)}`, {
+    const response = await fetch(`https://github.com/login/oauth/access_token?${new URLSearchParams(params)}`, {
         headers,
         method: 'POST',
     });
