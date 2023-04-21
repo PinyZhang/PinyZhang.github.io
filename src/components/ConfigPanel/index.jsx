@@ -43,13 +43,6 @@ const ParameterPanel = ({ options, setOptions }) => {
           style={{ maxWidth: 600 }}
           autoComplete="off"
         >
-          {/* size: 3,  
-    height: 1.0,
-    curveSegments: 1,
-    bevelEnabled: false, 
-    bevelThickness: 0.10,
-    bevelSize: 0.10, 
-    bevelSegments: 0, */}
           <Form.Item
             label="size"
           >
