@@ -15,6 +15,13 @@ historyStack.pushState({
   x: 0,
   y: 0,
   z: 0,
+  size: 3,  
+  height: 1.0,
+  curveSegments: 1,
+  bevelEnabled: false, 
+  bevelThickness: 0.10,
+  bevelSize: 0.10, 
+  bevelSegments: 0,
 });
 
 function App(props) {
@@ -58,7 +65,7 @@ function App(props) {
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
         <pointLight position={[-10, -10, -10]} />
         {/* <ConfigPanel /> */}
-        <ThreeCanvas username={props.username} position={[options.x, options.y, options.z]} color={options.color}/>
+        <ThreeCanvas username={props.username} position={[options.x, options.y, options.z]} options={options} />
         <OrbitControls mouseButtons={{
           LEFT: THREE.MOUSE.PAN
         }}/>

@@ -16,13 +16,13 @@ export default function ThreeCanvas(props) {
 
   const textoptions = {
     font: font,
-    size: 3,  
-    height: 1.0,
-    curveSegments: 1,
-    bevelEnabled: false, 
-    bevelThickness: 0.10,
-    bevelSize: 0.10, 
-    bevelSegments: 0,
+    size: props.options.size,
+    height: props.options.height,
+    curveSegments: props.options.curveSegments,
+    bevelEnabled: props.options.bevelEnabled,
+    bevelThickness: props.options.bevelThickness,
+    bevelSize: props.options.bevelSize,
+    bevelSegments: props.options.bevelSegments,
   };
 
   return (
@@ -32,7 +32,7 @@ export default function ThreeCanvas(props) {
     >
       <textGeometry args={[props.username, textoptions]} />
       <meshBasicMaterial args={[{
-        color: props.color
+        color: props.options.color
       }]}/>
     </mesh>
   );
