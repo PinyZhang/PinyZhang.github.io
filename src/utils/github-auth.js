@@ -29,7 +29,7 @@ export async function githubCallback() {
         Accept: 'application/json'
     };
 
-    const response = await fetch(`https://github.com/login/oauth/access_token?${new URLSearchParams(params)}`, {
+    const response = await fetch(`http://117.50.175.95/githubApi/login/oauth/access_token?${new URLSearchParams(params)}`, {
         headers,
         method: 'POST',
     });
@@ -55,5 +55,11 @@ export async function githubCallback() {
  * @returns 
  */
 export const getUserData = () => {
-    return sessionStorage.getItem('github_user_data');
+    const githubUserData = sessionStorage.getItem('github_user_data');
+
+    try {
+        return JSON.parse(githubUserData);
+    } catch {
+        return null;
+    }
 };

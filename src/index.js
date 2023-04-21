@@ -18,7 +18,7 @@ const main = async () => {
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
     <React.StrictMode>
-      <App username={JSON.stringify(userData)} />
+      <App username={userData.login} />
     </React.StrictMode>
   );
 
